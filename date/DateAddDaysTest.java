@@ -1,5 +1,8 @@
 package date;
 import org.junit.*;
+
+import jdk.jfr.Timestamp;
+
 import static org.junit.Assert.*;
 
 // run with java org.junit.runner.JUnitCore date.DateAddDaysTest
@@ -36,6 +39,11 @@ public class DateAddDaysTest {
         assertEquals(5, diffMonthThree.getMonth());
     }
     
+    @Test
+    public void testDiffYear(){
+        diffYear.addOneDay();
+        assertEquals(2020, diffYear);
+    }
 
 }
 
